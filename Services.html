@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aboveonly MFB Services</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:root {
+  --card-bg: #34510a;
+  --card-text: #ffffff;
+  --btn-bg: #ffffff;
+  --btn-color: #2f4a09;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+nav {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img { width: 120px; }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+}
+nav ul li a {
+  color: #006025;;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s;
+}
+nav ul li a:hover { background-color: #006025; color: #fff; border-radius: 5px; }
+
+.services-section {
+  padding: 3.5rem 1rem;
+  position: relative;
+  flex-grow: 1; /* pushes footer to the bottom if content is short */
+}
+.services-section h2 {
+  text-align: center;
+  color: #2f4a09;
+  font-size: 2.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.scroll-container-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.services {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+.services::-webkit-scrollbar { display: none; }
+
+.container {
+  flex: 0 0 calc((100% - 1.6rem)/3); /* Reduced width to fit 3 cards */
+  min-height: 120px; /* Reduced height */
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.4rem; }
+.container p { font-size: 0.8rem; line-height: 1.3; }
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--btn-bg);
+  border: none;
+  color: var(--btn-color);
+  font-size: 2rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.scroll-left { left: 0.3rem; }
+.scroll-right { right: 0.3rem; }
+.scroll-btn:hover { transform: translateY(-50%) scale(1.1); }
+
+footer {
+  background-color: var(--card-bg);
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+}
+.social_container { display: flex; justify-content: center; gap: 1rem; margin-bottom: 0.3rem; flex-wrap: wrap; }
+.social_container a { color: #fff; font-size: 1.4rem; transition: transform 0.3s, color 0.3s; }
+.social_container a:hover { color: #ffdd00; transform: scale(1.2); }
+
+</style>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <img src="./image/test.png" alt="Aboveonly MFB Logo">
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./services.html">Services</a></li>
+    <li><a href="Products.html">Products</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<section class="services-section">
+  <h2>In-Branch and Digital Banking Services</h2>
+
+  <div class="scroll-container-wrapper">
+    <button class="scroll-btn scroll-left" id="left">&#8249;</button>
+    <div class="services" id="services">
+      <div class="container">
+        <h3>Account Opening & Maintenance</h3>
+        <p>Open and manage accounts with ease, fully compliant with KYC and CBN requirements.</p>
+      </div>
+      <div class="container">
+        <h3>Cash Deposit & Withdrawal</h3>
+        <p>Deposit or withdraw cash conveniently in-branch or via approved digital channels.</p>
+      </div>
+      <div class="container">
+        <h3>Funds Transfer</h3>
+        <p>Transfer funds intra-bank and inter-bank securely and efficiently.</p>
+      </div>
+      <div class="container">
+        <h3>Bills Payment & Collections</h3>
+        <p>Pay utilities and collect funds using approved CBN electronic channels.</p>
+      </div>
+      <div class="container">
+        <h3>Loan Processing & Disbursement</h3>
+        <p>Apply for and receive loans following the Bank’s credit policy and CBN guidelines.</p>
+      </div>
+      <div class="container">
+        <h3>POS Transaction Processing</h3>
+        <p>Use POS terminals for merchant and agency banking transactions under approved guidelines.</p>
+      </div>
+      <div class="container">
+        <h3>Mobile App & Internet Banking</h3>
+        <p>Access accounts, transfer funds, and pay bills via secure mobile and internet banking platforms.</p>
+      </div>
+      <div class="container">
+        <h3>USSD Banking (*614*283#)</h3>
+        <p>Perform account transactions easily on your mobile phone without internet access.</p>
+      </div>
+      <div class="container">
+        <h3>ATM Card Services</h3>
+        <p>Withdraw cash, transfer funds, and perform secure card-based transactions nationwide.</p>
+      </div>
+      <div class="container">
+        <h3>Customer Care & Advisory</h3>
+        <p>Get support and guidance for all banking products, ensuring responsible financial practices.</p>
+      </div>
+    </div>
+    <button class="scroll-btn scroll-right" id="right">&#8250;</button>
+  </div>
+</section>
+
+<footer>
+  <div class="social_container">
+    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+    <a href="#"><i class="ri-twitter-fill"></i></a>
+    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+    <a href="#"><i class="ri-instagram-fill"></i></a>
+  </div>
+  <p>Aboveonly Microfinance Bank Limited is licensed by CBN</p>
+
+</footer>
+
+<script>
+const container = document.getElementById('services');
+const leftBtn = document.getElementById('left');
+const rightBtn = document.getElementById('right');
+
+leftBtn.addEventListener('click', () => {
+  container.scrollBy({ left: -container.clientWidth/1.5, behavior: 'smooth' });
+});
+rightBtn.addEventListener('click', () => {
+  container.scrollBy({ left: container.clientWidth/1.5, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
